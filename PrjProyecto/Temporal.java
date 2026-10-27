@@ -11,7 +11,7 @@ public class Temporal extends Proyecto {
     public double calcularCostoActual() {
         return costoInicial * tipoCambio;
     }
-
+    
     public String toString() {
         String s = super.toString();
         s = s + "Tipo de proyecto: Temporal\n" +

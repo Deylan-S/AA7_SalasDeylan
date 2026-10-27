@@ -1,6 +1,6 @@
 public class PrincipalProyecto {
     public static void main(String[] args) {
-        System.out.println("Ejecución por parte de: NOMBRE COMPLETO");
+        System.out.println("Ejecución por parte de: Deylan allain Salas Gaitan");
         System.out.println();
 
         Persona a, b;

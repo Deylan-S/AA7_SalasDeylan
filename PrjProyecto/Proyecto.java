@@ -3,13 +3,15 @@ import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 
 public abstract class Proyecto {
-    protected String codigo = "PRY-";
-    protected String nombre;
+    public static final String PREFIJO_CODIGO = "PRY-";
+
+    private String codigo;
+    private String nombre;
     protected double costoInicial;
-    protected String fechaDeInicio;
-    protected double ingresosAcumulados;
-    protected Persona encargado;
-    protected ArrayList<Entregable> entregables;
+    private String fechaDeInicio;
+    private double ingresosAcumulados;
+    private Persona encargado;
+    private ArrayList<Entregable> entregables;
     private static int cantProyectos;
 
     public Proyecto(String nombre, double costoInicial) {
@@ -19,7 +21,7 @@ public abstract class Proyecto {
         ingresosAcumulados = 0.0;
         entregables = new ArrayList<>();
         cantProyectos++;
-        codigo += String.format("%03d", cantProyectos);
+        codigo = PREFIJO_CODIGO + String.format("%03d", cantProyectos);
     }
 
     private String establecerFechaInicioProyecto() {
