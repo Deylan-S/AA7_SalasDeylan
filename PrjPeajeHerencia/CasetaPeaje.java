@@ -11,20 +11,7 @@ public class CasetaPeaje {
     }
 
     public void cobrarPeaje(Vehiculo obj) {
-        switch (obj.getTipo().toLowerCase()) {
-            case "particular":
-                totalCobrado += 100;
-                break;
-            case "carga liviana":
-                totalCobrado += 200;
-                break;
-            case "carga":
-                totalCobrado += 500;
-                break;
-            case "moto":
-                totalCobrado += 75;
-                break;
-        }
+        totalCobrado += obj.calcularMontoPeaje();
     }
 
     public double getTotalCobrado() {

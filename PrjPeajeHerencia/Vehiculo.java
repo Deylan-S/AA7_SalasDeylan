@@ -1,4 +1,4 @@
-public class Vehiculo {
+public abstract class Vehiculo {
     private String placa;
     private String tipo;
     private String marca;
@@ -12,6 +12,8 @@ public class Vehiculo {
         modelo = pModelo;
         annio = pAnnio;
     }
+
+    public abstract double calcularMontoPeaje();
 
     public String getTipo() {
         return tipo;
